@@ -1,13 +1,7 @@
-name: Compile ZMK
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - "config/*.keymap"
-      - "config/*.dtsi"
-      - "config/boards/shields/*.conf"
-      - "config/boards/shields/*.overlay"
-      - "config/boards/*/*/*.keymap"
+name: build fw
+
+on: [push, pull_request, workflow_dispatch]
+
 
 jobs:
   build:
